@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Сourse_project_Isaeva_21VP1.DBClass">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACQAAAAEAgAAAAAAAAAAAVYAEAAAKAAgAIAAAAQA=</HashCode>
+      <FileName>DBClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Сourse_project_Isaeva_21VP1.Item">
+    <Position X="2.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEBIAAAAAAAAAEAECAAAAAAAAAAgA=</HashCode>
+      <FileName>Item.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Сourse_project_Isaeva_21VP1.StartingForm">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="radioButton1" Hidden="true" />
+      <Field Name="radioButton2" Hidden="true" />
+      <Field Name="textBox1" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACCQADAAAACAAAASAAAAAAAAEAAAQAAgAAI=</HashCode>
+      <FileName>StartingForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Сourse_project_Isaeva_21VP1.TheMainForm">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="add_button" Hidden="true" />
+      <Field Name="Column1" Hidden="true" />
+      <Field Name="Column2" Hidden="true" />
+      <Field Name="Column3" Hidden="true" />
+      <Field Name="Column4" Hidden="true" />
+      <Field Name="Column5" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Field Name="dataGridView1" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Field Name="label4" Hidden="true" />
+      <Field Name="numericUpDown1" Hidden="true" />
+      <Field Name="numericUpDown2" Hidden="true" />
+      <Field Name="numericUpDown3" Hidden="true" />
+      <Field Name="numericUpDown4" Hidden="true" />
+      <Field Name="radioButtonFindID" Hidden="true" />
+      <Field Name="radioButtonFindName" Hidden="true" />
+      <Field Name="radioButtonFindQuantity" Hidden="true" />
+      <Field Name="radioButtonQuantityLess" Hidden="true" />
+      <Field Name="radioButtonQuantityMore" Hidden="true" />
+      <Field Name="radioButtonSortExpiration" Hidden="true" />
+      <Field Name="radioButtonSortID" Hidden="true" />
+      <Field Name="radioButtonSortName" Hidden="true" />
+      <Field Name="radioButtonSortProduction" Hidden="true" />
+      <Field Name="textBox1" Hidden="true" />
+      <Field Name="textBoxFileName" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>CAQREiAIACYQADAgEAioAFgTBAg5JgEGEAAAEoQAwCA=</HashCode>
+      <FileName>TheMainForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Сourse_project_Isaeva_21VP1.AddingForm">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="button1" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="invalidExpDateLabel" Hidden="true" />
+      <Field Name="invalidProdDateLabel" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label10" Hidden="true" />
+      <Field Name="label11" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Field Name="label4" Hidden="true" />
+      <Field Name="label5" Hidden="true" />
+      <Field Name="label6" Hidden="true" />
+      <Field Name="label7" Hidden="true" />
+      <Field Name="label8" Hidden="true" />
+      <Field Name="label9" Hidden="true" />
+      <Field Name="numericUpDown1" Hidden="true" />
+      <Field Name="numericUpDown2" Hidden="true" />
+      <Field Name="numericUpDown3" Hidden="true" />
+      <Field Name="numericUpDown4" Hidden="true" />
+      <Field Name="numericUpDown5" Hidden="true" />
+      <Field Name="numericUpDown6" Hidden="true" />
+      <Field Name="numericUpDown7" Hidden="true" />
+      <Field Name="textBox1" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>MQAAAQEAECEAgBAAIYSAAAgSQIAIAAwCEEAAAIwAAEA=</HashCode>
+      <FileName>AddingForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Сourse_project_Isaeva_21VP1.EditingForm">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="button1" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="invalidExpDateLabel" Hidden="true" />
+      <Field Name="invalidProdDateLabel" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label10" Hidden="true" />
+      <Field Name="label11" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Field Name="label4" Hidden="true" />
+      <Field Name="label5" Hidden="true" />
+      <Field Name="label6" Hidden="true" />
+      <Field Name="label7" Hidden="true" />
+      <Field Name="label8" Hidden="true" />
+      <Field Name="label9" Hidden="true" />
+      <Field Name="numericUpDown1" Hidden="true" />
+      <Field Name="numericUpDown2" Hidden="true" />
+      <Field Name="numericUpDown3" Hidden="true" />
+      <Field Name="numericUpDown4" Hidden="true" />
+      <Field Name="numericUpDown5" Hidden="true" />
+      <Field Name="numericUpDown6" Hidden="true" />
+      <Field Name="numericUpDown7" Hidden="true" />
+      <Field Name="textBox1" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>MQAAAQEAECAAgBAAIYSAAAgCQAAoAAwCEEAAAIwAAEA=</HashCode>
+      <FileName>EditingForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

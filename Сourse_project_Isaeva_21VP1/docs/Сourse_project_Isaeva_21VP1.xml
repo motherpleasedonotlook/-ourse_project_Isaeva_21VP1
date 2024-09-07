@@ -1,0 +1,335 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Сourse_project_Isaeva_21VP1</name>
+    </assembly>
+    <members>
+        <member name="T:Сourse_project_Isaeva_21VP1.DBClass">
+            <summary>
+            Класс DBClass предназначен для связи и работы с базой данный MySQL
+            </summary>
+        </member>
+        <member name="F:Сourse_project_Isaeva_21VP1.DBClass.name">
+            <summary>
+            name - имя базы данных, задается пользователем. По умолчанию base_name
+            </summary>
+        </member>
+        <member name="M:Сourse_project_Isaeva_21VP1.DBClass.#ctor">
+            <summary>
+            DBClass – конструктор объекта класса. Присваивает полям имени базы и данных для соединения с MySQL значения по умолчанию
+            </summary>
+        </member>
+        <member name="M:Сourse_project_Isaeva_21VP1.DBClass.createDB">
+            <summary>
+            createDB – выполняет команду SQL, которая создает базу данных.
+            </summary>
+            <returns>возвращает true в случае успеха, false в случае неудачи</returns>
+        </member>
+        <member name="M:Сourse_project_Isaeva_21VP1.DBClass.createComand(System.String)">
+            <summary>
+            создает объект команды к MySQL.
+            </summary>
+            <param name="comand"></param>
+            <returns>возвращает объект команды к MySQL</returns>
+        </member>
+        <member name="M:Сourse_project_Isaeva_21VP1.DBClass.openDB(System.String)">
+            <summary>
+            openDB – выполняет команду SQL, которая осуществляет открытие существующей базы данных и создание в ней нужной таблицы, если та не существует.
+            </summary>
+            <param name="existing_db"></param>
+            <returns>возвращает true в случае успеха, false в случае неудачи</returns>
+        </member>
+        <member name="M:Сourse_project_Isaeva_21VP1.DBClass.addNote(Сourse_project_Isaeva_21VP1.Item)">
+            <summary>
+            addNote – выполняет команду SQL, которая добавляет запись в таблицу базы данных
+            </summary>
+            <param name="item"></param>
+            <returns>возвращает true в случае успеха, false в случае неудачи</returns>
+        </member>
+        <member name="M:Сourse_project_Isaeva_21VP1.DBClass.DBToList">
+            <summary>
+            DBToList – преобразует базу данных в список List элементов типа Item.
+            </summary>
+            <returns>возвращает список элементов типа Item</returns>
+        </member>
+        <member name="M:Сourse_project_Isaeva_21VP1.DBClass.DBToFile(System.IO.Stream)">
+            <summary>
+            DBToFile - производит запись базы данных в файл
+            </summary>
+            <param name="stream">принимает объект класса Stream</param>
+        </member>
+        <member name="M:Сourse_project_Isaeva_21VP1.DBClass.dropDB">
+            <summary>
+            dropDB – выполняет команду SQL, которая удаляет базу данных
+            </summary>
+            <returns>возвращает true в случае успеха, false в случае неудачи</returns>
+        </member>
+        <member name="M:Сourse_project_Isaeva_21VP1.DBClass.removeNote(System.Int32)">
+            <summary>
+            removeNote – выполняет команду SQL, которая осуществляет поиск элемента по ID.
+            </summary>
+            <param name="id">ID элемента - целое число</param>
+            <returns>возвращает true в случае успеха, false в случае неудачи</returns>
+        </member>
+        <member name="M:Сourse_project_Isaeva_21VP1.DBClass.editNote(System.Int32,System.Int32,System.DateTime,System.DateTime)">
+            <summary>
+            editNote – выполняет команду SQL, которая обновляет запись о продукте.
+            </summary>
+            <param name="id">ID элемента - целое число</param>
+            <param name="quantity">новое значение количества продукта</param>
+            <param name="prod">новое значение даты производства продукта</param>
+            <param name="exp">новое значение даты истечения срока годности продукта</param>
+        </member>
+        <member name="M:Сourse_project_Isaeva_21VP1.DBClass.findNoteByID(System.Int32)">
+            <summary>
+            findNoteByID – выполняет команду SQL, которая осуществляет поиск элемента по ID.
+            </summary>
+            <param name="id">ID элемента - целое число</param>
+            <returns>возвращает список List элементов типа Item </returns>
+        </member>
+        <member name="M:Сourse_project_Isaeva_21VP1.DBClass.findNoteByName(System.Int32)">
+            <summary>
+            findNoteByName – выполняет команду SQL, которая осуществляет поиск элемента по полю количества.
+            </summary>
+            <param name="quantity">искомое количество</param>
+            <returns>возвращает список List элементов типа Item</returns>
+        </member>
+        <member name="M:Сourse_project_Isaeva_21VP1.DBClass.findNoteByName(System.String)">
+            <summary>
+            findNoteByName – выполняет команду SQL, которая осуществляет поиск элемента по полю наименования.
+            </summary>
+            <param name="name_">наименование товара</param>
+            <returns>возвращает список List элементов типа Item</returns>
+        </member>
+        <member name="M:Сourse_project_Isaeva_21VP1.DBClass.readQuery(MySql.Data.MySqlClient.MySqlCommand)">
+            <summary>
+            readQuery – возвращает результат выполнения sql-запроса в виде списка элементов типа Item.
+            </summary>
+            <param name="myCommand">объект команды MySql</param>
+            <returns>возвращает список объектов типа Item</returns>
+        </member>
+        <member name="M:Сourse_project_Isaeva_21VP1.DBClass.sort(System.String,System.String)">
+            <summary>
+            sort – выполняет команду SQL, которая осуществляет сортировку записей в таблице по определенному полю в заданном направлении.
+            </summary>
+            <param name="field">поле, по которому осуществляется поиск элементов</param>
+            <param name="direction">направление поиска</param>
+            <returns>возвращает список List объектов типа Item</returns>
+        </member>
+        <member name="T:Сourse_project_Isaeva_21VP1.StartingForm">
+            <summary>
+            Открывающая форма
+            </summary>
+        </member>
+        <member name="M:Сourse_project_Isaeva_21VP1.StartingForm.#ctor">
+            <summary>
+            Конструктор формы
+            </summary>
+        </member>
+        <member name="M:Сourse_project_Isaeva_21VP1.StartingForm.BlockCreating(System.Boolean)">
+            <summary>
+            Метод блокирует кнопку создания базы данных, если открыта основная форма
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="F:Сourse_project_Isaeva_21VP1.StartingForm.components">
+            <summary>
+            Обязательная переменная конструктора.
+            </summary>
+        </member>
+        <member name="M:Сourse_project_Isaeva_21VP1.StartingForm.Dispose(System.Boolean)">
+            <summary>
+            Освободить все используемые ресурсы.
+            </summary>
+            <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
+        </member>
+        <member name="M:Сourse_project_Isaeva_21VP1.StartingForm.InitializeComponent">
+            <summary>
+            Требуемый метод для поддержки конструктора — не изменяйте 
+            содержимое этого метода с помощью редактора кода.
+            </summary>
+        </member>
+        <member name="T:Сourse_project_Isaeva_21VP1.TheMainForm">
+            <summary>
+            Класс основной формы
+            </summary>
+        </member>
+        <member name="F:Сourse_project_Isaeva_21VP1.TheMainForm.db">
+            <summary>
+            текущая база данных
+            </summary>
+        </member>
+        <member name="M:Сourse_project_Isaeva_21VP1.TheMainForm.#ctor(Сourse_project_Isaeva_21VP1.StartingForm,Сourse_project_Isaeva_21VP1.DBClass)">
+            <summary>
+            Конструктор формы
+            </summary>
+            <param name="form1">объект класса StartingForm - открывающей формы</param>
+            <param name="db">объект класса DBClass - текущая база данных</param>
+        </member>
+        <member name="M:Сourse_project_Isaeva_21VP1.TheMainForm.AddToDB(Сourse_project_Isaeva_21VP1.Item)">
+            <summary>
+            Метод добавляет элемент в базу данных, если объект с таким названием не существует.
+            Иначе предлагает редактировать существующий элемент.
+            </summary>
+            <param name="item">объект класса Item</param>
+        </member>
+        <member name="M:Сourse_project_Isaeva_21VP1.TheMainForm.updateTable(System.Collections.Generic.List{Сourse_project_Isaeva_21VP1.Item})">
+            <summary>
+            Метод обновляет таблицу
+            </summary>
+            <param name="list">текущий список List товаров в базе данных - объектов класса Item</param>
+        </member>
+        <member name="F:Сourse_project_Isaeva_21VP1.TheMainForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Сourse_project_Isaeva_21VP1.TheMainForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Сourse_project_Isaeva_21VP1.TheMainForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Сourse_project_Isaeva_21VP1.AddingForm">
+            <summary>
+            Форма добавления элемента
+            </summary>
+        </member>
+        <member name="M:Сourse_project_Isaeva_21VP1.AddingForm.#ctor(Сourse_project_Isaeva_21VP1.TheMainForm,Сourse_project_Isaeva_21VP1.Item)">
+            <summary>
+            Конструктор формы
+            </summary>
+            <param name="form2">объект класса TheMainForm - основной формы</param>
+            <param name="item">объект класса Item - добавляемый элемент</param>
+        </member>
+        <member name="F:Сourse_project_Isaeva_21VP1.AddingForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Сourse_project_Isaeva_21VP1.AddingForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Сourse_project_Isaeva_21VP1.AddingForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Сourse_project_Isaeva_21VP1.EditingForm">
+            <summary>
+            Форма изменения элемента
+            </summary>
+        </member>
+        <member name="M:Сourse_project_Isaeva_21VP1.EditingForm.#ctor(Сourse_project_Isaeva_21VP1.TheMainForm,Сourse_project_Isaeva_21VP1.Item)">
+            <summary>
+            Конструктор формы
+            </summary>
+            <param name="form2">объект класса TheMainForm - главной формы</param>
+            <param name="item">объект класса Item - изменяемый элемент</param>
+        </member>
+        <member name="F:Сourse_project_Isaeva_21VP1.EditingForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Сourse_project_Isaeva_21VP1.EditingForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Сourse_project_Isaeva_21VP1.EditingForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Сourse_project_Isaeva_21VP1.Item">
+            <summary>
+            Класс Item - хранит записи о товаре.
+            </summary>
+        </member>
+        <member name="F:Сourse_project_Isaeva_21VP1.Item.id">
+            <summary>
+            поле id товара
+            </summary>
+        </member>
+        <member name="F:Сourse_project_Isaeva_21VP1.Item.name">
+            <summary>
+            поле наименование товара
+            </summary>
+        </member>
+        <member name="F:Сourse_project_Isaeva_21VP1.Item.productionDate">
+            <summary>
+            поле дата производства товара
+            </summary>
+        </member>
+        <member name="F:Сourse_project_Isaeva_21VP1.Item.expirationDate">
+            <summary>
+            поле дата истечения срока хранения товара
+            </summary>
+        </member>
+        <member name="F:Сourse_project_Isaeva_21VP1.Item.quantity">
+            <summary>
+            поле количество товара на складе
+            </summary>
+        </member>
+        <member name="F:Сourse_project_Isaeva_21VP1.Item.count">
+            <summary>
+            количество созданных объектов
+            </summary>
+        </member>
+        <member name="M:Сourse_project_Isaeva_21VP1.Item.#ctor">
+            <summary>
+            конструктор объекта класса Item. Заполняет поля значениями по умолчанию
+            </summary>
+        </member>
+        <member name="M:Сourse_project_Isaeva_21VP1.Item.#ctor(System.Int32,System.String,System.DateTime,System.DateTime,System.Int32)">
+            <summary>
+            конструктор объекта класса Item. Заполняет поля указанными значениями
+            </summary>
+            <param name="id">id элемнта, целое число</param>
+            <param name="name">наименование, строка</param>
+            <param name="productionDate">дата производства, тип DateTime</param>
+            <param name="expirationDate">дата истечения срока годности, тип DateTime</param>
+            <param name="quantity">количество товара, целое число</param>
+        </member>
+        <member name="M:Сourse_project_Isaeva_21VP1.Item.ToString">
+            <summary>
+            перегружает метод toString для объекта класса Item
+            </summary>
+            <returns>возвращает строку</returns>
+        </member>
+        <member name="M:Сourse_project_Isaeva_21VP1.Program.Main">
+            <summary>
+            Главная точка входа для приложения.
+            </summary>
+        </member>
+        <member name="T:Сourse_project_Isaeva_21VP1.Properties.Resources">
+            <summary>
+              Класс ресурсов со строгим типом для поиска локализованных строк и пр.
+            </summary>
+        </member>
+        <member name="P:Сourse_project_Isaeva_21VP1.Properties.Resources.ResourceManager">
+            <summary>
+              Возврат кэшированного экземпляра ResourceManager, используемого этим классом.
+            </summary>
+        </member>
+        <member name="P:Сourse_project_Isaeva_21VP1.Properties.Resources.Culture">
+            <summary>
+              Переопределяет свойство CurrentUICulture текущего потока для всех
+              подстановки ресурсов с помощью этого класса ресурсов со строгим типом.
+            </summary>
+        </member>
+    </members>
+</doc>
